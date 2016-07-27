@@ -1,6 +1,6 @@
 ﻿### Steam VR Template ###
 
-Instruction guide [found in the onedrive](https://onedrive.live.com/redir?resid=6283336A7C9CA810!6527&authkey=!AJMU7UC1E0IlaGc&ithint=folder%2czip "pre-authed link")
+Instruction guide [found in the onedrive]https://1drv.ms/f/s!AhConHxqM4Nisn-TFO1AtRNCJWhn 
 
 Disclaimer: The goal of this template is to put together a noob-proof SteamVR pawn to drop in your scene. However, one size for all solutions will not answer to all specific implementations, but it can gives you a head start. The template will be updated regularly with Unreal forum contributors suggestions. 
 
@@ -16,54 +16,57 @@ Have fun!
 
 Mat, at Proteus VR
 
-Version 1.10 – UE4.12.2: June 14, 2016
+External credits:
+* VRExpansion Plugin and functionnalities: @mordentral
+* Vive Controller inputs image: @mitchemmc
+* Teleport function #2, UltraMan: @PenguinTD
+
+For questions,s see the forum thread: https://forums.unrealengine.com/showthread.php?106609-Steam-VR-Template 
+
+# Version 1.11 – UE4.12.5: July 27, 2016 #
 
 Changelog
 
-* Updated to 4.12.2
-* Updated grab plugin
-* Left and Right grab hands
-* New vehicle controls: vehicle rotate with direction
-* New environment with interactive consoles
-* Chaperone poles spawn fixed
-* Less settings; the rest will be in a future 3D menu
-* Matinee changed for Sequencer
-* Small glitches and crashes fixed
+* Updated to 4.12.5
+* Now using VRExpansion plugin
+* Multiplayer ready…or almost
+* Playground rotation or locked when teleport
+* Lot of small fixes
 
+#Features#
 
-
-Features
-
-* Animated triggers in both controllers
-* Map of all buttons/trackpad on controllers
-* Toggle on/off debugging squares of controllers and/or base stations
-* Toggle on/off debugging meshes of base stations
-* 2 different ways to teleport
-* Ghost move
-* Basic vehicle
-* Scalability settings for Vive
-* Finger tracking on trackpad
-* Trace line with trigger
-* Force feedback
-* Textures on cubes and sphere to test scalability settings
-* Toybox: 4 objects with skeletal sockets: the sword, the gun, the baton, the lightsaber; 1 object with mesh socket: the book; 1 object without sockets: the hat
-* Animated "grabbing" mesh left and right hands
-* Teleportation with trackpad à la The Lab with cylinder & particles validation
-* Go/No go teleportation zones with camera fade out
-* Moving platform for testing purpose, by simple actor move (embark by triggering overlap volume or teleportation; disembark by teleportation) and Sequencer (embark/disembark with controller input)
-* Triggerable poles at the 4 chaperone corners
-* Addition of a cone at the tip of the right trigger -- can be rotated
-* “UltraMan” mode
-* Standing/seated experience switch
+* Basic pawn with controllers meshes, trackpads, face
+Animated triggers and hands in both controllers
+Mapping of all buttons/trackpad on controllers
+Force feedback
+Selectable controllers skins & opacity
+Select alternate meshes for controllers
+Adjustable "safe" value to teleport on uneven surfaces
+* Locomotion
+Teleport with trackpad and rotate playground
+Teleport with trigger
+Ghost Move
 * Grab function
-* Head mesh with mirror
-* Selectable controllers skins & opacity
-* Select alternate meshes for controllers
-* Adjustable "safe" value to teleport on uneven surfaces
-* New environment with interactive consoles
+Additional functions
+* Go/No go teleportation zones with camera fade out
+Toggle on/off debugging squares of controllers and/or base stations
+Toggle on/off debugging meshes of base stations
+Triggerable poles at the 4 chaperone corners
+Basic vehicle functions
+Moving platform for testing purpose, by simple actor move (embark by triggering overlap volume or teleportation; disembark by teleportation) and matinee (embark/disembark with controller input)
+“UltraMan” mode
+* Settings
+Basic settings
+Scalability settings
+Pawn settings
+* Toybox
+4 objects with skeletal sockets: the sword, the gun, the baton, the lightsaber; 1 object with mesh socket: the book; 1 object without sockets: the hat
+* Multiplayer
+Multiplayer ready (missing: 3D widget interaction: soon!)
+
 
 Setup
-Files can be found [on OneDrive](https://onedrive.live.com/redir?resid=6283336A7C9CA810!6527&authkey=!AJMU7UC1E0IlaGc&ithint=folder%2czip "pre-authed link")
+Files can be found [on OneDrive] https://1drv.ms/f/s!AhConHxqM4Nisn-TFO1AtRNCJWhn 
 
 GitHub version at https://github.com/ProteusVR/SteamVR_Template (you need to be logged to Github to open the link) 
 
@@ -72,3 +75,5 @@ To install as a template, just unzip into the appropriate templates directory li
 Launch a new project, and you'll find it in the blueprint section.
 
 To install as a project file, unzip in your usual projects folder. Then, delete the file SteamVR_x-x/Config/TemplateDefs.ini and you’re ready to go.
+
+# IMPORTANT: If you open it like a regular project without deleting the .ini file, you’ll get errors messages.#
